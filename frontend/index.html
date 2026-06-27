@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADK Smart Cafeteria Ordering Kiosk</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Menu Dashboard -->
+        <aside class="menu-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-utensils logo-icon"></i>
+                    <h1>ADK Cafe<span>Assistant</span></h1>
+                </div>
+                <div class="status-badge online">
+                    <span class="dot"></span> Connected
+                </div>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="search-filter-container">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="menu-search-input" placeholder="Search menu, vegan, gluten-free...">
+                </div>
+                
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">All</button>
+                    <button class="category-tab" data-category="mains">Mains</button>
+                    <button class="category-tab" data-category="sides">Sides</button>
+                    <button class="category-tab" data-category="beverages">Beverages</button>
+                </div>
+            </div>
+
+            <!-- Menu Cards Grid -->
+            <div class="menu-grid-wrapper">
+                <div class="menu-grid" id="menu-items-grid">
+                    <!-- Cards will be dynamically injected here -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Panel Chat Ordering Assistant -->
+        <main class="chat-container">
+            <header class="chat-header">
+                <div class="agent-profile">
+                    <div class="agent-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                        <span class="badge-active"></span>
+                    </div>
+                    <div class="agent-info">
+                        <h2>AI Kiosk Assistant</h2>
+                        <p>Ask me to recommend, order, check inventory, or view sales analytics</p>
+                    </div>
+                </div>
+                <button class="reset-btn" id="reset-session-btn" title="Reset Session">
+                    <i class="fa-solid fa-rotate-left"></i> Reset
+                </button>
+            </header>
+
+            <!-- Chat Message Thread -->
+            <div class="chat-messages" id="chat-messages-thread">
+                <div class="message system-msg">
+                    <div class="msg-bubble">
+                        <p>👋 Hello! I am your AI Cafeteria Assistant. You can search the menu, place orders, ask for recommendations, or check inventory. How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Human-In-The-Loop Approval Overlay (Embedded in flow) -->
+            <div class="hitl-overlay-container" id="hitl-overlay" style="display: none;">
+                <div class="hitl-card">
+                    <div class="hitl-icon">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <div class="hitl-content">
+                        <h3>Order Confirmation Required</h3>
+                        <p id="hitl-message-text">Please confirm your order.</p>
+                        <div class="hitl-actions">
+                            <button class="btn btn-approve" id="hitl-approve-btn">
+                                <i class="fa-solid fa-check"></i> Approve Order
+                            </button>
+                            <button class="btn btn-reject" id="hitl-reject-btn">
+                                <i class="fa-solid fa-xmark"></i> Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suggestion Chips -->
+            <div class="suggestions-wrapper">
+                <div class="suggestion-chips">
+                    <button class="chip">🥗 What's vegan and gluten-free?</button>
+                    <button class="chip">🍔 Place order for one Turkey Club</button>
+                    <button class="chip">📊 View sales analytics</button>
+                    <button class="chip">☕ Is matcha latte in stock?</button>
+                </div>
+            </div>
+
+            <!-- Chat Input Area -->
+            <footer class="chat-input-area">
+                <form id="chat-input-form" class="input-form">
+                    <input type="text" id="chat-user-input" placeholder="Type your message here..." autocomplete="off">
+                    <button type="submit" class="send-btn" id="send-message-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <!-- JavaScript code -->
+    <script src="app.js"></script>
+</body>
+</html>
