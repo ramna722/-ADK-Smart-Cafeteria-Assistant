@@ -104,3 +104,18 @@ Once the frontend is open, you can test the following flows:
 | `make playground` | `uv run adk web app ...` | Starts the local playground backend on port 18081 |
 | `make run` | `uv run python -m app.agent_runtime_app` | Runs the agent production runtime app |
 | `make test` | `uv run pytest tests/` | Runs unit and integration tests |
+
+---
+
+## 🎨 Assets
+
+### Project Cover Page Banner
+![Project Cover Banner](assets/cover_page_banner.png)
+
+### Agent Workflow Diagram
+![Agent Workflow Diagram](assets/architecture_diagram.png)
+
+---
+
+## 🎬 Demo Script
+The spoken narration and stage cues for demonstrating this application are available in [DEMO_SCRIPT.txt](DEMO_SCRIPT.txt).

@@ -1,6 +1,6 @@
 # 📄 ADK Smart Cafeteria Assistant - Submission Write-Up
 
-![ADK Smart Cafeteria Banner](C:\Users\User\.gemini\antigravity-ide\brain\2242b845-1e01-493c-b2d7-c5f572280803\cafeteria_cover_banner.png)
+![ADK Smart Cafeteria Banner](C:\Users\User\.gemini\antigravity-ide\brain\2242b845-1e01-493c-b2d7-c5f572280803\cover_page_banner.png)
 
 ## 1. Project Overview
 The **ADK Smart Cafeteria Assistant** is an intelligent agentic workspace application designed to revolutionize cafeteria kiosk ordering. It utilizes the latest **ADK 2.0 multi-agent workflow graph framework** combined with **Gemini 2.5-flash** to deliver automated menu search, personalized dietary recommendations, order placement, order tracking, live inventory status, and sales analytics.
@@ -44,7 +44,7 @@ graph TD
     style SecViolation fill:#f94144,stroke:#f94144,stroke-width:2px,color:#fff
 ```
 
-![ADK Cafeteria Assistant Architecture](C:\Users\User\.gemini\antigravity-ide\brain\2242b845-1e01-493c-b2d7-c5f572280803\cafeteria_architecture_diagram.png)
+![ADK Cafeteria Assistant Architecture](C:\Users\User\.gemini\antigravity-ide\brain\2242b845-1e01-493c-b2d7-c5f572280803\architecture_diagram.png)
 
 ---
 
